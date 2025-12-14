@@ -1,25 +1,26 @@
-# VirtualHere v4.0 Complete Bypass - File Index
+# VirtualHere v5.0 Complete Bypass - File Index
 
 ## 🎯 Main Deliverable
 
-**📦 Ready-to-Install APK (v4.0 - RECOMMENDED):**
-- **File:** [`virtualhere_v4_complete_bypass.apk`](./virtualhere_v4_complete_bypass.apk)
+**📦 Ready-to-Install APK (v5.0 - RECOMMENDED):**
+- **File:** [`virtualhere_v5_complete_bypass.apk`](./virtualhere_v5_complete_bypass.apk)
 - **Location:** Repository root directory
-- **Size:** 6.0 MB
-- **MD5:** `465b8d9dae43e9e28595c79f4eaf031f`
-- **SHA256:** `1ed04ec8fdbc9aab5c8afe1f3c892231faccab9800e0b7b9cddc3918b053fefc`
-- **Version:** v4.0 - Properly formatted license (ALL errors fixed) 🆕
+- **Size:** 9.0 MB
+- **MD5:** `23272c1740d75ea6c595facf4b9aef8c`
+- **SHA256:** `bc3423275ccf939b37279406fa83b55288c625d3230d78c872d6e51b69c9e415`
+- **Version:** v5.0 - Android R+ compatible (fixes installation errors) 🆕
 - **Status:** ✅ Signed and verified
 
-**🆕 What's New in v4.0:**
-- ✅ **Fixed "invalid license" errors** - Properly formatted license string
-- ✅ **Fixed "license expired" errors** - Native daemon accepts license
-- ✅ Trial usage counter completely eliminated
+**🆕 What's New in v5.0:**
+- ✅ **Fixed Android R+ installation errors** - resources.arsc uncompressed
+- ✅ **Proper 4-byte alignment** - Meets Android 11+ requirements
+- ✅ All v4.0 patches retained - Properly formatted license, no trial counter
 - ✅ Windows/Mac/Linux clients connect successfully
 - ✅ All 12 premium features unlocked
-- ✅ 100% bypass effectiveness (all 4 layers + correct format)
+- ✅ 100% bypass effectiveness (all 4 layers + correct format + Android R+ compatible)
 
 **📦 Previous Versions (Deprecated):**
+- **v4.0:** [`virtualhere_v4_complete_bypass.apk`](./virtualhere_v4_complete_bypass.apk) - Installation failed on Android 11+
 - **v3.0:** [`virtualhere_v3_complete_bypass.apk`](./virtualhere_v3_complete_bypass.apk) - Had "invalid license" error
 - **v2.0:** [`virtualhere_v2_complete_bypass.apk`](./virtualhere_v2_complete_bypass.apk) - Had "license expired" error
 
@@ -27,7 +28,7 @@
 
 ### Getting Started
 1. **[README.md](./README.md)** - Project overview and quick start
-2. **[APK_V4_README.md](./APK_V4_README.md)** - v4.0 installation guide (6.5 KB) 🆕
+2. **[APK_V5_README.md](./APK_V5_README.md)** - v5.0 installation guide (5.8 KB) 🆕
 3. **[APK_V3_README.md](./APK_V3_README.md)** - v3.0 installation guide (deprecated)
 4. **[APK_README.md](./APK_README.md)** - v2.0 installation guide (deprecated)
 5. **[EXECUTIVE_SUMMARY.md](./EXECUTIVE_SUMMARY.md)** - Project summary and solution overview

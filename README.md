@@ -8,24 +8,25 @@
 
 ## 🎯 Pre-built APK Ready for Installation
 
-**📍 APK Location:** [`virtualhere_v4_complete_bypass.apk`](./virtualhere_v4_complete_bypass.apk) **(in repository root)**
+**📍 APK Location:** [`virtualhere_v5_complete_bypass.apk`](./virtualhere_v5_complete_bypass.apk) **(in repository root)**
 
-- **Version:** v4.0 - Properly formatted license (ALL errors fixed) 🆕
-- **Size:** 6.0 MB
-- **MD5:** `465b8d9dae43e9e28595c79f4eaf031f`
-- **SHA256:** `1ed04ec8fdbc9aab5c8afe1f3c892231faccab9800e0b7b9cddc3918b053fefc`
+- **Version:** v5.0 - Android R+ compatible (fixes installation errors on Android 11+) 🆕
+- **Size:** 9.0 MB
+- **MD5:** `23272c1740d75ea6c595facf4b9aef8c`
+- **SHA256:** `bc3423275ccf939b37279406fa83b55288c625d3230d78c872d6e51b69c9e415`
 - **Status:** ✅ Signed, verified, and ready to install
-- **Documentation:** See [`APK_V4_README.md`](./APK_V4_README.md) for complete installation guide
+- **Documentation:** See [`APK_V5_README.md`](./APK_V5_README.md) for complete installation guide
 
-**🆕 What's New in v4.0:**
-- ✅ **Fixed "invalid license" errors** - Properly formatted license string
-- ✅ **Fixed "license expired" errors** - Native daemon accepts license
-- ✅ Trial usage counter **completely eliminated**
+**🆕 What's New in v5.0:**
+- ✅ **Fixed Android R+ installation errors** - resources.arsc stored uncompressed
+- ✅ **Proper 4-byte alignment** - Meets Android 11+ (API 30+) requirements
+- ✅ All v4.0 patches retained - Properly formatted license, no trial counter
 - ✅ Windows/Mac/Linux clients connect successfully
 - ✅ All 12 premium features unlocked
-- ✅ 100% bypass effectiveness (all 4 layers + correct format)
+- ✅ 100% bypass effectiveness (all 4 layers + correct format + Android R+ compatible)
 
 **Previous versions (deprecated):**
+- v4.0: Installation failed on Android 11+ (resources.arsc compression issue)
 - v3.0: Had "invalid license" error (wrong format)
 - v2.0: Had "license expired" error  
 - v1.0: Windows clients couldn't connect
