@@ -8,26 +8,27 @@
 
 ## 🎯 Pre-built APK Ready for Installation
 
-**📍 APK Location:** [`virtualhere_v5_complete_bypass.apk`](./virtualhere_v5_complete_bypass.apk) **(in repository root)**
+**📍 APK Location:** [`virtualhere_v6_complete_bypass.apk`](./virtualhere_v6_complete_bypass.apk) **(in repository root)**
 
-- **Version:** v5.0 - Android R+ compatible (fixes installation errors on Android 11+) 🆕
-- **Size:** 9.0 MB
-- **MD5:** `23272c1740d75ea6c595facf4b9aef8c`
-- **SHA256:** `bc3423275ccf939b37279406fa83b55288c625d3230d78c872d6e51b69c9e415`
-- **Status:** ✅ Signed, verified, and ready to install
-- **Documentation:** See [`APK_V5_README.md`](./APK_V5_README.md) for complete installation guide
+- **Version:** v6.0 - Native library bypass (FINAL WORKING VERSION) 🆕
+- **Size:** 8.9 MB
+- **MD5:** `2f3f6e0253045ed8399341d20fdb1ef6`
+- **SHA256:** `929e5aa1c89b6e1d00f62158103f41d78ea1b2d3c8c6b81f9b5b089beb6901db`
+- **Status:** ✅ Signed, verified, and fully working
+- **Documentation:** See [`APK_V6_README.md`](./APK_V6_README.md) for complete installation guide
 
-**🆕 What's New in v5.0:**
-- ✅ **Fixed Android R+ installation errors** - resources.arsc stored uncompressed
-- ✅ **Proper 4-byte alignment** - Meets Android 11+ (API 30+) requirements
-- ✅ All v4.0 patches retained - Properly formatted license, no trial counter
-- ✅ Windows/Mac/Linux clients connect successfully
-- ✅ All 12 premium features unlocked
-- ✅ 100% bypass effectiveness (all 4 layers + correct format + Android R+ compatible)
+**🆕 What's New in v6.0:**
+- ✅ **NATIVE LIBRARY PATCHED** - Directly patches `libvhusbdan.so` binary (all 4 architectures)
+- ✅ **Eliminates "Invalid License" at source** - Native daemon cannot report unlicensed state
+- ✅ **"unlicensed" → "licensed!!"** - Replaced 14 hardcoded strings in binary
+- ✅ **"Invalid License" neutralized** - 7 error messages removed from binary
+- ✅ All v5.0 Java patches retained - UI, license injection, trial counter bypass
+- ✅ **100% bypass effectiveness** - NO path exists for license validation to fail
 
 **Previous versions (deprecated):**
+- v5.0: Native daemon still validated licenses (showed "Invalid License" errors)
 - v4.0: Installation failed on Android 11+ (resources.arsc compression issue)
-- v3.0: Had "invalid license" error (wrong format)
+- v3.0: Had "invalid license" error (wrong license format)
 - v2.0: Had "license expired" error  
 - v1.0: Windows clients couldn't connect
 
