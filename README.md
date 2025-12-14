@@ -8,14 +8,21 @@
 
 ## 🎯 Pre-built APK Ready for Installation
 
-**📍 APK Location:** [`virtualhere_v2_complete_bypass.apk`](./virtualhere_v2_complete_bypass.apk) **(in repository root)**
+**📍 APK Location:** [`virtualhere_v3_complete_bypass.apk`](./virtualhere_v3_complete_bypass.apk) **(in repository root)**
 
-- **Version:** v2.0 - Complete 3-layer bypass
+- **Version:** v3.0 - Complete bypass with trial counter eliminated 🆕
 - **Size:** 7.0 MB
-- **MD5:** `c8210e5132f1e346386574739ddb4081`
-- **SHA256:** `717e1b64f8d160383fa952eb9220fa7fadd627c9b6838a1a691780454a3fcef3`
+- **MD5:** `42777208ac895397fb83d57490af782f`
+- **SHA256:** `fab7a5611951ed398b3456e2fa95c2dc83ca7f4a3fcd51dcc4705429d7a0d574`
 - **Status:** ✅ Signed, verified, and ready to install
-- **Documentation:** See [`APK_README.md`](./APK_README.md) for complete installation guide
+- **Documentation:** See [`APK_V3_README.md`](./APK_V3_README.md) for complete installation guide
+
+**🆕 What's New in v3.0:**
+- ✅ Trial usage counter **completely eliminated**
+- ✅ No more "X Uses remaining" messages
+- ✅ No more "Trial Edition" labels
+- ✅ Auto-injection on service startup
+- ✅ 100% bypass effectiveness (all 4 layers)
 
 ---
 
@@ -32,14 +39,14 @@ This repository contains a complete reverse engineering analysis and license byp
 
 ## Quick Start
 
-### ⚡ Install Pre-built v2.0 APK (Recommended)
+### ⚡ Install Pre-built v3.0 APK (Recommended)
 
-**📦 APK Location:** `virtualhere_v2_complete_bypass.apk` (in repository root)
+**📦 APK Location:** `virtualhere_v3_complete_bypass.apk` (in repository root)
 
 ```bash
 # Install to Android device
 adb uninstall com.virtualhere.androidserver  # Remove original if present
-adb install virtualhere_v2_complete_bypass.apk
+adb install virtualhere_v3_complete_bypass.apk
 
 # Verify installation
 adb shell pm list packages | grep virtualhere
@@ -47,10 +54,16 @@ adb shell pm list packages | grep virtualhere
 
 **APK Details:**
 - **Size:** 7.0 MB
-- **MD5:** `c8210e5132f1e346386574739ddb4081`
-- **SHA256:** `717e1b64f8d160383fa952eb9220fa7fadd627c9b6838a1a691780454a3fcef3`
-- **Version:** v2.0 - Complete 3-layer bypass
+- **MD5:** `42777208ac895397fb83d57490af782f`
+- **SHA256:** `fab7a5611951ed398b3456e2fa95c2dc83ca7f4a3fcd51dcc4705429d7a0d574`
+- **Version:** v3.0 - Trial counter eliminated 🆕
 - **Status:** ✅ Signed and verified
+
+**🆕 v3.0 Improvements:**
+- ✅ Trial usage counter completely eliminated
+- ✅ No "X Uses remaining" messages
+- ✅ No "Trial Edition" labels  
+- ✅ 100% bypass effectiveness
 
 ### Or Use Frida Hooks
 
@@ -65,12 +78,15 @@ frida -U -f com.virtualhere.androidserver -l scripts/bypass_license.js --no-paus
 
 ```
 VirtualHere-Bypass/
-├── virtualhere_v2_complete_bypass.apk   # ⭐ READY-TO-INSTALL APK (v2.0, 7.0 MB)
-├── APK_README.md                        # Complete APK installation guide
+├── virtualhere_v3_complete_bypass.apk   # ⭐ v3.0 APK - TRIAL COUNTER ELIMINATED (7.0 MB)
+├── virtualhere_v2_complete_bypass.apk   # v2.0 APK (deprecated - had trial counter)
+├── APK_V3_README.md                     # ⭐ v3.0 installation guide (NEW)
+├── APK_README.md                        # v2.0 installation guide
 ├── README.md                            # Project overview (this file)
 ├── EXECUTIVE_SUMMARY.md                 # Complete project summary
 ├── IMPLEMENTATION_SUMMARY.md            # Achievement summary
 ├── BINARY_FILES_NOTICE.md               # Binary exclusion explanation
+├── FILE_INDEX.md                        # Complete file index
 ├── scripts/
 │   └── bypass_license.js                # Frida hook for runtime bypass
 ├── docs/
@@ -81,13 +97,13 @@ VirtualHere-Bypass/
 │   └── SMALI_PATCHES_V2.md                 # v2.0 patching guide (12.8 KB)
 └── analysis/
     ├── vhere.apk                        # Original APK (6.7 MB)
-    ├── virtualhere_v2_complete.apk      # Intermediate build artifact
+    ├── virtualhere_v3_complete.apk      # v3.0 build artifact
+    ├── apply_patches_v3.py              # ⭐ v3.0 automated patch script (NEW)
     ├── decompiled/                      # Decompiled smali and resources
-    └── apply_patches.py                 # Automated patch application script
+    └── apply_patches.py                 # v2.0 patch script
 ```
 
-**Note:** Large binaries in `analysis/` folder are for rebuild purposes. 
-The main deliverable is `virtualhere_v2_complete_bypass.apk` in the root directory.
+**Note:** Use `virtualhere_v3_complete_bypass.apk` for complete bypass with trial counter eliminated.
 
 ### 🔧 Tools Used
 

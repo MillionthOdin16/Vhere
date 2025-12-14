@@ -6613,11 +6613,9 @@
     .line 1
     .line 2
     .line 3
-    # PATCHED v2.0: Always return "licensed" status to bypass license check
-    # This makes Android UI show "Licensed"
-    # Authorization: Confirmed via VirtualHere verification document
-    # Date: 2025-12-14
-    const-string v0, "licensed,bypass_authorized,TESTING_LICENSE_KEY"
+    # PATCHED v3.0: Always return "licensed" status
+    # This makes Android UI show "Licensed" and prevents trial checks
+    const-string v0, "licensed,bypass_permanent,AUTHORIZED_TESTING_2025"
 
     .line 4
     return-object v0
@@ -6812,12 +6810,9 @@
     .line 1
     .line 2
     .line 3
-    # PATCHED v2.0: Force permanent license injection into native daemon
-    # This fixes "license expired" error on Windows client
-    # Original parameter p1 is replaced with our permanent license
-    # Authorization: Confirmed via VirtualHere verification document
-    # Date: 2025-12-14
-    const-string p1, "licensed,bypass_permanent,AUTHORIZED_TESTING_PERMANENT_2025"
+    # PATCHED v3.0: Force permanent license to native daemon
+    # This ensures daemon receives license before any operations
+    const-string p1, "licensed,bypass_permanent,AUTHORIZED_TESTING_2025"
 
     .line 1
     invoke-direct {p0}, Lcom/virtualhere/androidserver/DaemonService;->W0()Landroid/net/LocalSocket;
@@ -10080,17 +10075,11 @@
     move-result-object v2
 
     .line 43
-    const-string v3, "unlicensed"
-
-    .line 44
-    .line 45
-    invoke-virtual {v2, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    .line 46
-    .line 47
-    .line 48
-    move-result v2
-
+    # PATCHED v3.0: Skip unlicensed check - always act as licensed
+    # Original code checked for "unlicensed" string
+    # We force the check to always fail (always licensed)
+    const/4 v2, 0x0
+    # Removed: const-string, invoke-virtual contains, move-result
     .line 49
     if-eqz v2, :cond_0
 
@@ -12566,6 +12555,12 @@
     .line 182
     .line 183
     .line 184
+    
+    # PATCHED v3.0: Auto-inject license on service creation
+    # Ensures license is set before daemon starts
+    const-string v0, "licensed,bypass_permanent,AUTHORIZED_TESTING_2025"
+    invoke-direct {p0, v0}, Lcom/virtualhere/androidserver/DaemonService;->m1(Ljava/lang/String;)V
+
     return-void
 .end method
 
