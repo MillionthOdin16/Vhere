@@ -1,0 +1,15 @@
+# Large binary tools and outputs
+tools/jadx/
+tools/*.jar
+targets/*.apk
+outputs/
+
+# Temporary files
+*.tmp
+*.log
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
