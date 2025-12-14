@@ -1,0 +1,17 @@
+.class public interface abstract LI0/a$a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements LJ0/O;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = LI0/a;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "a"
+.end annotation

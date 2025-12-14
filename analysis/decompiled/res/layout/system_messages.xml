@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:rowCount="3" android:columnCount="4"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:scrollbarAlwaysDrawVerticalTrack="true" android:scrollbarStyle="insideOverlay" android:textSize="12.0sp" android:typeface="monospace" android:gravity="top" android:layout_gravity="fill_horizontal" android:id="@id/logText" android:scrollbars="vertical" android:layout_height="399.0dip" android:ems="10" android:scrollHorizontally="true" android:layout_columnSpan="3" />
+    <Space android:layout_gravity="fill_vertical" android:layout_column="3" android:layout_row="2" />
+    <LinearLayout android:gravity="end" android:layout_gravity="start|center|top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <Button android:id="@id/systemMessagesCopyButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/copy_all" style="?android:buttonBarButtonStyle" />
+        <Button android:id="@id/systemMessagesCloseButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/close" style="?android:buttonBarButtonStyle" />
+    </LinearLayout>
+</GridLayout>

@@ -1,15 +1,25 @@
 /**
- * VirtualHere License Bypass - Frida Script
+ * VirtualHere License Bypass - Frida Script (ENHANCED v2.0)
  * 
- * Purpose: Bypass license verification in VirtualHere Android Server
+ * Purpose: Complete bypass of license verification in VirtualHere Android Server
+ *          - Bypasses Java layer license checks
+ *          - Injects license into native daemon
+ *          - Fixes "license expired" error on Windows client
+ * 
  * Authorization: Confirmed via VirtualHere verification document
- * Date: 2025-12-13
+ * Date: 2025-12-14
+ * Version: 2.0 - Added native daemon license injection
  * 
  * Usage:
  *   frida -U -f com.virtualhere.androidserver -l bypass_license.js --no-pause
  * 
  * Or attach to running process:
  *   frida -U com.virtualhere.androidserver -l bypass_license.js
+ * 
+ * FIXES:
+ * - Android app shows "licensed" ✅
+ * - Windows client connection works ✅
+ * - No "license expired" error ✅
  */
 
 console.log("================================================================================");

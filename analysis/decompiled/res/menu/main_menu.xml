@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<n1:menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:n1="http://schemas.android.com/tools">
+    <item android:id="@id/system_messages_menu_item" android:orderInCategory="1" android:title="@string/system_messages" app:showAsAction="never" />
+    <item android:id="@id/start_on_boot_menu_item" android:orderInCategory="2" android:title="@string/start_on_boot_menu_item_label" android:checkable="true" app:showAsAction="never" />
+    <item android:id="@id/wifi_lock_menu_item" android:orderInCategory="3" android:title="@string/keep_wifi_on_menu_item_label" android:checkable="true" app:showAsAction="never" />
+    <item android:id="@id/wake_lock_menu_item" android:orderInCategory="4" android:title="@string/keep_awake_label" android:checkable="true" app:showAsAction="never" />
+    <item android:id="@id/enable_easyfind_menu_item" android:orderInCategory="5" android:title="@string/enable_easyfind_label" android:checkable="true" app:showAsAction="never" />
+    <item android:id="@id/ignored_devices_menu_item" android:orderInCategory="6" android:title="@string/ignored_devices" app:showAsAction="never" />
+    <item android:id="@id/reverse_client_menu_item" android:orderInCategory="7" android:title="@string/reverse_clients" app:showAsAction="never" />
+    <item android:id="@id/license_menu_item" android:orderInCategory="8" android:title="@string/license_menu_item_label" app:showAsAction="never" />
+    <item android:id="@id/ssl_menu_item" android:orderInCategory="9" android:title="@string/ssl_menu_item_label" app:showAsAction="never" />
+    <item android:id="@id/help_menu_item" android:orderInCategory="10" android:title="@string/help_menu_item_label" app:showAsAction="never" />
+    <item android:id="@id/about_menu_item" android:orderInCategory="11" android:title="@string/about" app:showAsAction="never" />
+    <item android:id="@id/exit_menu_item" android:orderInCategory="12" android:title="@string/exit" app:showAsAction="never" />
+</n1:menu>
