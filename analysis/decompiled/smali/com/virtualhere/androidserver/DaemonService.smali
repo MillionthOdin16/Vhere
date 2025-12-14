@@ -6613,9 +6613,9 @@
     .line 1
     .line 2
     .line 3
-    # PATCHED v3.0: Always return "licensed" status
-    # This makes Android UI show "Licensed" and prevents trial checks
-    const-string v0, "licensed,bypass_permanent,AUTHORIZED_TESTING_2025"
+    # PATCHED v4.0: Return properly formatted license string
+    # Format: licensed,<serial>,<base64_key>
+    const-string v0, "licensed,RESEARCH2025,QVVUSE9SSVpFRF9SRVNFQVJDSF9URVNUSU5HX1BFUk1BTkVOVF8yMDI1X1ZIRVJFXzIwMjVfMDAwMDA="
 
     .line 4
     return-object v0
@@ -6810,9 +6810,9 @@
     .line 1
     .line 2
     .line 3
-    # PATCHED v3.0: Force permanent license to native daemon
-    # This ensures daemon receives license before any operations
-    const-string p1, "licensed,bypass_permanent,AUTHORIZED_TESTING_2025"
+    # PATCHED v4.0: Inject properly formatted permanent license
+    # This ensures daemon receives valid license format
+    const-string p1, "licensed,RESEARCH2025,QVVUSE9SSVpFRF9SRVNFQVJDSF9URVNUSU5HX1BFUk1BTkVOVF8yMDI1X1ZIRVJFXzIwMjVfMDAwMDA="
 
     .line 1
     invoke-direct {p0}, Lcom/virtualhere/androidserver/DaemonService;->W0()Landroid/net/LocalSocket;
@@ -12558,7 +12558,7 @@
     
     # PATCHED v3.0: Auto-inject license on service creation
     # Ensures license is set before daemon starts
-    const-string v0, "licensed,bypass_permanent,AUTHORIZED_TESTING_2025"
+    const-string v0, "licensed,RESEARCH2025,QVVUSE9SSVpFRF9SRVNFQVJDSF9URVNUSU5HX1BFUk1BTkVOVF8yMDI1X1ZIRVJFXzIwMjVfMDAwMDA="
     invoke-direct {p0, v0}, Lcom/virtualhere/androidserver/DaemonService;->m1(Ljava/lang/String;)V
 
     return-void
