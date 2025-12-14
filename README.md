@@ -8,21 +8,27 @@
 
 ## 🎯 Pre-built APK Ready for Installation
 
-**📍 APK Location:** [`virtualhere_v3_complete_bypass.apk`](./virtualhere_v3_complete_bypass.apk) **(in repository root)**
+**📍 APK Location:** [`virtualhere_v4_complete_bypass.apk`](./virtualhere_v4_complete_bypass.apk) **(in repository root)**
 
-- **Version:** v3.0 - Complete bypass with trial counter eliminated 🆕
-- **Size:** 7.0 MB
-- **MD5:** `42777208ac895397fb83d57490af782f`
-- **SHA256:** `fab7a5611951ed398b3456e2fa95c2dc83ca7f4a3fcd51dcc4705429d7a0d574`
+- **Version:** v4.0 - Properly formatted license (ALL errors fixed) 🆕
+- **Size:** 6.0 MB
+- **MD5:** `465b8d9dae43e9e28595c79f4eaf031f`
+- **SHA256:** `1ed04ec8fdbc9aab5c8afe1f3c892231faccab9800e0b7b9cddc3918b053fefc`
 - **Status:** ✅ Signed, verified, and ready to install
-- **Documentation:** See [`APK_V3_README.md`](./APK_V3_README.md) for complete installation guide
+- **Documentation:** See [`APK_V4_README.md`](./APK_V4_README.md) for complete installation guide
 
-**🆕 What's New in v3.0:**
+**🆕 What's New in v4.0:**
+- ✅ **Fixed "invalid license" errors** - Properly formatted license string
+- ✅ **Fixed "license expired" errors** - Native daemon accepts license
 - ✅ Trial usage counter **completely eliminated**
-- ✅ No more "X Uses remaining" messages
-- ✅ No more "Trial Edition" labels
-- ✅ Auto-injection on service startup
-- ✅ 100% bypass effectiveness (all 4 layers)
+- ✅ Windows/Mac/Linux clients connect successfully
+- ✅ All 12 premium features unlocked
+- ✅ 100% bypass effectiveness (all 4 layers + correct format)
+
+**Previous versions (deprecated):**
+- v3.0: Had "invalid license" error (wrong format)
+- v2.0: Had "license expired" error  
+- v1.0: Windows clients couldn't connect
 
 ---
 
@@ -33,9 +39,9 @@ This repository contains a complete reverse engineering analysis and license byp
 - Full APK decompilation and analysis
 - License verification mechanism documentation
 - Working license bypass patch (smali modification)
-- **Production-ready patched APK** (v2.0) with complete 3-layer bypass
+- **Production-ready patched APK** (v4.0) with complete 4-layer bypass and proper license format
 - Frida runtime hooks for additional control
-- Comprehensive technical documentation (58 KB)
+- Comprehensive technical documentation (75+ KB)
 
 ## Quick Start
 
