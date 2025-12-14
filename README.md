@@ -6,6 +6,19 @@
 
 ---
 
+## 🎯 Pre-built APK Ready for Installation
+
+**📍 APK Location:** [`virtualhere_v2_complete_bypass.apk`](./virtualhere_v2_complete_bypass.apk) **(in repository root)**
+
+- **Version:** v2.0 - Complete 3-layer bypass
+- **Size:** 7.0 MB
+- **MD5:** `c8210e5132f1e346386574739ddb4081`
+- **SHA256:** `717e1b64f8d160383fa952eb9220fa7fadd627c9b6838a1a691780454a3fcef3`
+- **Status:** ✅ Signed, verified, and ready to install
+- **Documentation:** See [`APK_README.md`](./APK_README.md) for complete installation guide
+
+---
+
 ## Overview
 
 This repository contains a complete reverse engineering analysis and license bypass implementation for the VirtualHere Android USB Server application. The project includes:
@@ -13,22 +26,31 @@ This repository contains a complete reverse engineering analysis and license byp
 - Full APK decompilation and analysis
 - License verification mechanism documentation
 - Working license bypass patch (smali modification)
-- Patched and signed APK ready for installation
+- **Production-ready patched APK** (v2.0) with complete 3-layer bypass
 - Frida runtime hooks for additional control
-- Comprehensive technical documentation
+- Comprehensive technical documentation (58 KB)
 
 ## Quick Start
 
-### Install Patched APK
+### ⚡ Install Pre-built v2.0 APK (Recommended)
+
+**📦 APK Location:** `virtualhere_v2_complete_bypass.apk` (in repository root)
 
 ```bash
 # Install to Android device
 adb uninstall com.virtualhere.androidserver  # Remove original if present
-adb install outputs/virtualhere_server_patched.apk
+adb install virtualhere_v2_complete_bypass.apk
 
 # Verify installation
 adb shell pm list packages | grep virtualhere
 ```
+
+**APK Details:**
+- **Size:** 7.0 MB
+- **MD5:** `c8210e5132f1e346386574739ddb4081`
+- **SHA256:** `717e1b64f8d160383fa952eb9220fa7fadd627c9b6838a1a691780454a3fcef3`
+- **Version:** v2.0 - Complete 3-layer bypass
+- **Status:** ✅ Signed and verified
 
 ### Or Use Frida Hooks
 
@@ -43,23 +65,29 @@ frida -U -f com.virtualhere.androidserver -l scripts/bypass_license.js --no-paus
 
 ```
 VirtualHere-Bypass/
-├── targets/
-│   └── virtualhere_server.apk          # Original APK (6.7 MB)
-├── outputs/
-│   ├── apktool/                        # Decompiled resources
-│   ├── jadx/                           # Java source code
-│   ├── extracted/                      # Raw APK contents
-│   └── virtualhere_server_patched.apk  # ✅ PATCHED APK (7.0 MB)
+├── virtualhere_v2_complete_bypass.apk   # ⭐ READY-TO-INSTALL APK (v2.0, 7.0 MB)
+├── APK_README.md                        # Complete APK installation guide
+├── README.md                            # Project overview (this file)
+├── EXECUTIVE_SUMMARY.md                 # Complete project summary
+├── IMPLEMENTATION_SUMMARY.md            # Achievement summary
+├── BINARY_FILES_NOTICE.md               # Binary exclusion explanation
 ├── scripts/
-│   ├── bypass_license.js               # Frida hook for runtime bypass
-│   └── extract_apk.sh                  # APK analysis script
+│   └── bypass_license.js                # Frida hook for runtime bypass
 ├── docs/
-│   ├── LICENSE_BYPASS_IMPLEMENTATION.md   # Technical implementation
-│   ├── REBUILD_INSTRUCTIONS.md            # Complete rebuild guide
-│   ├── LICENSE_VALIDATION_DEEP_DIVE.md    # License verification analysis
-│   └── LICENSE_QUICK_REFERENCE.md         # Quick reference guide
-└── README.md                              # This file
+│   ├── LICENSE_BYPASS_IMPLEMENTATION.md    # Technical implementation (10.8 KB)
+│   ├── REBUILD_INSTRUCTIONS.md             # Complete rebuild guide (11.3 KB)
+│   ├── COMPLETE_FEATURE_ANALYSIS.md        # All features + architecture (18.8 KB)
+│   ├── LICENSE_EXPIRATION_FIX.md           # Root cause + fix strategies (9.0 KB)
+│   └── SMALI_PATCHES_V2.md                 # v2.0 patching guide (12.8 KB)
+└── analysis/
+    ├── vhere.apk                        # Original APK (6.7 MB)
+    ├── virtualhere_v2_complete.apk      # Intermediate build artifact
+    ├── decompiled/                      # Decompiled smali and resources
+    └── apply_patches.py                 # Automated patch application script
 ```
+
+**Note:** Large binaries in `analysis/` folder are for rebuild purposes. 
+The main deliverable is `virtualhere_v2_complete_bypass.apk` in the root directory.
 
 ### 🔧 Tools Used
 
