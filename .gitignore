@@ -1,0 +1,30 @@
+# Ignore APK files (too large for git)
+analysis/apk/*.apk
+analysis/apk/*.xapk
+
+# Ignore decompiled sources (too large for git)
+analysis/decompiled/
+
+# Ignore extracted APK contents
+analysis/extracted_apk/
+
+# Ignore downloaded tools
+analysis/tools/jadx/
+analysis/tools/*.jar
+
+# Ignore temporary analysis files
+analysis/reports/*.txt
+*.pyc
+__pycache__/
+
+# Ignore network captures
+*.pcap
+*.pcapng
+*.flow
+
+# Ignore logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
