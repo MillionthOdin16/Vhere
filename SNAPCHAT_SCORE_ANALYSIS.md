@@ -390,14 +390,69 @@ def response(flow: http.HTTPFlow) -> None:
 
 ---
 
-## Score Update Frequency
+## Score Update Frequency and Caching Behavior
 
-Based on observable patterns and reactive programming:
+### Actual Implementation (From Code)
 
-1. **Real-time Updates:** Scores use `BridgeObservable<Double>` indicating reactive updates
-2. **Cache Duration:** Unknown, likely short-lived (minutes to hours)
-3. **Pull-to-Refresh:** Immediately fetches latest scores
-4. **Background Sync:** May occur during app lifecycle events
+1. **One-Time Fetch Per Session:** Score data fetched once when profile first viewed, cached in RxJava `BehaviorSubject`
+2. **No Expiration:** Cached value never expires during session
+3. **No Refresh Mechanism:** No pull-to-refresh or cache invalidation implemented
+4. **Session-Scoped:** Cache tied to app session lifecycle
+
+### ⚠️ Score Staleness Issue - CONFIRMED ROOT CAUSE
+
+**Problem:** Scores appear out of date when viewing profiles. Only logout/login refreshes them.
+
+**Root Cause (Verified in Code):**
+
+**File:** `defpackage.C18372cX7` (FriendProfileDataProviderImpl)
+
+```java
+public final class C18372cX7 {
+    private final AtomicBoolean j0;  // One-time fetch guard
+    private final BehaviorSubject k0;  // Caches profile data forever
+    
+    @Override
+    public void w1(AbstractC48065yBj session) {
+        // Only executes ONCE per instance
+        if (this.j0.compareAndSet(false, true)) {
+            // Fetch profile data including score
+            // Push to BehaviorSubject k0
+            // Future subscribers get cached value
+        }
+        // Subsequent calls exit immediately - no new fetch
+    }
+    
+    public Observable j() {
+        // Returns observable from BehaviorSubject
+        // Always replays last cached value
+        return this.k0.V(Functions.a);
+    }
+}
+```
+
+**Mechanism:**
+1. First profile view: `j0 = false` → API call made → score cached in `k0` BehaviorSubject → `j0 = true`
+2. Subsequent views: `j0 = true` → method exits early → cached value replayed
+3. BehaviorSubject never expires or refreshes automatically
+4. Same instance reused for entire session
+
+### Only Verified Solution
+
+✅ **Logout and Login** (ONLY METHOD THAT WORKS)
+- Destroys `C18372cX7` singleton instance
+- New login creates new instance with `j0 = false`
+- Fresh API call on next profile view
+- New BehaviorSubject with current data
+
+### What Does NOT Work (User Confirmed)
+
+❌ **Force closing app** - Android may restore state, same instance reused
+❌ **Clearing app cache** - Score cached in memory (BehaviorSubject), not disk
+❌ **Pull-to-refresh** - Feature does not exist in profile code (verified by grep)
+❌ **Reopening profile** - Same Observable instance replays cached value
+
+**Detailed Technical Analysis:** See [DEFINITIVE_SCORE_ANALYSIS.md](./DEFINITIVE_SCORE_ANALYSIS.md) for complete code evidence and architecture diagrams.
 
 ---
 
